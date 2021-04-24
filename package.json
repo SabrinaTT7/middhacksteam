@@ -1,0 +1,26 @@
+{
+  "name": "middhacks",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Sabrina Templeton",
+  "contributors": [
+    "Christopher Andrews <candrews@middlebury.edu>",
+    "Michael Linderman <mlinderman@middlebury.edu>",
+    "Eric",
+    "Johanna",
+    "John"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "jest",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "next": "9.5.3",
+    "prop-types": "^15.7.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  }
+}
