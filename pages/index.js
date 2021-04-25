@@ -31,7 +31,7 @@ export default function Home() {
                     <div className="p-4 my-4 bg-light text-dark rounded-3">
                         <h1>Hello, pandemic friends!</h1>
                         <h2>Welcome to the world of <i>Pandemic Pals</i> where you can befriend someone new in these challenging times!</h2>    
-                        {page === undefined && <About user = {{name: "Sabrina", age: 20}}/>}
+                        {/* {page === undefined && <About user = {{name: "Sabrina", age: 20}}/>} */}
                     </div>
                 </div>
                
