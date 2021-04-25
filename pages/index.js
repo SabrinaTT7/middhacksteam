@@ -3,6 +3,7 @@ import About from '../components/About';
 import Form from '../components/Form';
 import Pal from '../components/Pal';
 import Login from '../components/Login';
+//import styles from '../styles/style.css';
 
 export default function Home() {
     const [page, setPage] = useState(undefined)
@@ -41,21 +42,21 @@ export default function Home() {
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                            <div class="navbar-nav">
-                                <button class="" onClick= {() => setPage('form')}>Get Matched!</button>
-                                <button class="" onClick= {() => setPage('pal')}>Letter Time!</button>
+                        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div className="navbar-nav">
+                                <button className ="button" onClick= {() => setPage('form')}>Get Matched!</button>
+                                <button className = "button" onClick= {() => setPage('pal')}>Letter Time!</button>
                             </div>
                         </div>
                     </div>
                 </nav>
-                {loginStatus === false && <Login selected = {(item) => {setLoginStatus(item), console.log(undefined)}}/>}
+                {page === undefined && <Login selected = {(item) => setLoginStatus(item)}/>}
                 {page === "form" && <Form/>}
                 {page === "pal" && <Pal/>}
 
             
                 {/* <!-- Bootstrap JS --> */}
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossOrigin="anonymous"></script>
                 
                
 
