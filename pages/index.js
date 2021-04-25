@@ -7,6 +7,7 @@ import Login from '../components/Login';
 export default function Home() {
     const [page, setPage] = useState(undefined)
     const [loginStatus, setLoginStatus] = useState(false)
+    
     return (
         <div>
             <head>
@@ -42,13 +43,13 @@ export default function Home() {
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
-                                <button class="" onClick= {() => setPage('pal')}>Get Matched!</button>
-                                <button class="" onClick= {() => setPage('form')}>Letter Time!</button>
+                                <button class="" onClick= {() => setPage('form')}>Get Matched!</button>
+                                <button class="" onClick= {() => setPage('pal')}>Letter Time!</button>
                             </div>
                         </div>
                     </div>
                 </nav>
-                {!loginStatus && <Login handler = {(status) => {setLoginStatus(status)}}/>}
+                {loginStatus === false && <Login selected = {(item) => {setLoginStatus(item), console.log(undefined)}}/>}
                 {page === "form" && <Form/>}
                 {page === "pal" && <Pal/>}
 

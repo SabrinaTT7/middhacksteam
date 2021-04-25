@@ -1,0 +1,17 @@
+[
+    {"name": "Sabrina", 
+    "username": "stempleton",
+    "interests": ["musicals", "shakespeare", "skateboarding"],
+    "match": "ramen"
+    },
+    {"name": "Alex", 
+    "username": "atollerman",
+    "interests": ["coding", "music", "cooking"]
+    },
+    {"name": "Becca", 
+    "username": "ramen",
+    "interests": ["poetry", "music"],
+    "match": "stempleton"
+    }
+    
+]
