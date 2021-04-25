@@ -16,7 +16,7 @@ export default function Home() {
             <meta name="viewport" content="width=device-width, initial-scale=1"> */}
 
             {/* <!-- Bootstrap CSS --> */}
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"/>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossOrigin="anonymous"/>
 {/*             
             <!-- Local CSS --> */}
             <link rel="stylesheet" href="style.css"/>
@@ -27,8 +27,8 @@ export default function Home() {
             </head>
           
             <body>
-                <div class="container">
-                    <div class="p-4 my-4 bg-light text-dark rounded-3">
+                <div className="container">
+                    <div className="p-4 my-4 bg-light text-dark rounded-3">
                         <h1>Hello, pandemic friends!</h1>
                         <h2>Welcome to the world of <i>Pandemic Pals</i> where you can befriend someone new in these challenging times!</h2>    
                         {page === undefined && <About user = {{name: "Sabrina", age: 20}}/>}
