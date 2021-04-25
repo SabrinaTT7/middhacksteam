@@ -1,5 +1,12 @@
-import {useState} from 'react';
+import {useState, setState} from 'react';
+import About from '../components/About';
+import Form from '../components/Form';
+import Pal from '../components/Pal';
+import Login from '../components/Login';
+
 export default function Home() {
+    const [page, setPage] = useState(undefined)
+    const [loginStatus, setLoginStatus] = useState(false)
     return (
         <div>
             <head>
@@ -17,42 +24,39 @@ export default function Home() {
 
             <title>Pandemic Pals</title>
             </head>
+          
             <body>
                 <div class="container">
                     <div class="p-4 my-4 bg-light text-dark rounded-3">
                         <h1>Hello, pandemic friends!</h1>
                         <h2>Welcome to the world of <i>Pandemic Pals</i> where you can befriend someone new in these challenging times!</h2>    
+                        {page === undefined && <About user = {{name: "Sabrina", age: 20}}/>}
                     </div>
                 </div>
+               
                 <nav class="navbar navbar-light bg-light navbar-expand-md">
                     <div class="container">
-                        <span class="navbar-brand">Middlebury Panther</span>
+                        <span class="navbar-brand">navigate</span>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
-                                <a class="nav-link" href="">Get Matched!</a>
-                                <a class="nav-link" href="pal.html">Check In! (Better name here lol)</a>
+                                <button class="" onClick= {() => setPage('pal')}>Get Matched!</button>
+                                <button class="" onClick= {() => setPage('form')}>Letter Time!</button>
                             </div>
                         </div>
                     </div>
                 </nav>
-                <h3>Contact Me</h3>
-                <ul class="list-inline">
-                    <li class="list-inline-item">panther@middlebury.edu</li>
-                    <li class="list-inline-item"><a href="https://github.com/middlebury"><i class="bi-github" role="img" aria-label="GitHub"></i></a></li>
-                    <li class="list-inline-item"><a href="https://www.linkedin.com/school/middlebury-college/"><i class="bi-linkedin" role="img" aria-label="GitHub"></i></a></li>
-                </ul>
+                {!loginStatus && <Login handler = {(status) => {setLoginStatus(status)}}/>}
+                {page === "form" && <Form/>}
+                {page === "pal" && <Pal/>}
+
+            
                 {/* <!-- Bootstrap JS --> */}
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
                 
-                <form class="box" action="index.html" method="post">
-                    <h1>Login</h1>
-                    <input type ="text" name ="" placeholder="Username"></input>
-                    <input type = "password" name ="" placeholder ="Password"></input>
-                    <input type = "submit" name= "" value ="Login"></input>
-                </form>
+               
 
             </body>
 
