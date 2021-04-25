@@ -12,6 +12,9 @@
     "username": "ramen",
     "interests": ["poetry", "music"],
     "match": "stempleton"
+    },
+    {"name": "Rory", 
+        "username": "lgilmore",
+        "interests": ["reading", "music", "writing"]
     }
-    
 ]
